@@ -91,8 +91,10 @@ export default function OnboardingPage() {
         />
 
         <input
-          type="text"
+          type="number"
           name="document"
+          min={1}
+          max={9999999999}
           placeholder="Documento"
           value={form.document}
           onChange={handleChange}
@@ -108,6 +110,8 @@ export default function OnboardingPage() {
 
         <input
           type="number"
+          min={1}
+          max={99999999}
           name="initialAmount"
           placeholder="Monto inicial"
           value={form.initialAmount}

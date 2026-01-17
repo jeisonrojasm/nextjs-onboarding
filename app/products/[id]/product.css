@@ -1,0 +1,16 @@
+.product-container {
+  padding: 16px;
+  background-color: var(--color-2);
+  min-height: 100vh;
+}
+
+.product-title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.product-description {
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+

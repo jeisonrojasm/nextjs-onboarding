@@ -1,0 +1,31 @@
+.products-container {
+  padding: 16px;
+  background-color: var(--color-2);
+  min-height: 100vh;
+}
+
+.products-title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.product-card {
+  background-color: var(--color-1);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.product-card h2 {
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  font-size: 14px;
+  margin-bottom: 12px;
+}

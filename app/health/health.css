@@ -1,0 +1,10 @@
+.container {
+  min-height: 100vh;
+  padding: 24px;
+  background: var(--color-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+

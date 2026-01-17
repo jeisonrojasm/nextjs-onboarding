@@ -1,16 +1,16 @@
 .product-container {
-  padding: 16px;
+  padding: 1.6rem;
   background-color: var(--color-2);
   min-height: 100vh;
 }
 
 .product-title {
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 3.2rem;
 }
 
 .product-description {
-  font-size: 14px;
-  margin-bottom: 24px;
+  font-size: var(--font-size-3-mobile);
+  margin-bottom: 3.2rem;
 }
 

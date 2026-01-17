@@ -129,6 +129,10 @@ h6 {
   margin: 0;
 }
 
+h1 {
+  margin-bottom: 3.2rem
+}
+
 /* Grouping content
    ========================================================================== */
 
@@ -299,6 +303,17 @@ input {
   overflow: visible;
 }
 
+input {
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  border: 0.1rem solid var(--color-6);
+  font-size: var(--font-size-3-mobile);
+}
+
+input::placeholder {
+  font-size: var(--font-size-3-mobile);
+}
+
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
@@ -330,7 +345,7 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+  outline: 0.1rem dotted ButtonText;
 }
 
 /**
@@ -407,7 +422,7 @@ textarea {
  */
 
 [type="search"] {
-  outline-offset: -2px;
+  outline-offset: -0.2rem;
   /* 1 */
 }
 
@@ -471,13 +486,13 @@ template {
 
 .error {
   color: var(--color-5);
-  font-size: 14px;
+  font-size: var(--font-size-3-mobile);
   text-align: center;
 }
 
 .success {
   color: var(--color-4);
-  font-size: 18px;
+  font-size: var(--font-size-3-mobile);
 }
 
 .info {

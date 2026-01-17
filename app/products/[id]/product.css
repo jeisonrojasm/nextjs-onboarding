@@ -1,0 +1,16 @@
+.product-container {
+  padding: 1.6rem;
+  background-color: var(--color-2);
+  height: 100%;
+}
+
+.product-title {
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+
+.product-description {
+  font-size: var(--font-size-3-mobile);
+  margin-bottom: 3.2rem;
+}
+

@@ -1,8 +1,15 @@
 :root {
   --color-1: #FFFFFF;
-  --font-size-1-mobile: 2.5rem;
-  --font-size-2-mobile: 2.0rem;
-  --font-size-3-mobile: 1.5rem;
+  --color-2: #f5f6fa;  /*background color*/
+  --color-3: #1e3a8a;  /*backgroun botones y textos*/
+  --color-4: #065f46;  /*Exito texto health*/
+  --color-5: #dc2626;  /*Error texto health*/
+  --color-6: #ccc;  /*Bordes de inputs*/
+  --color-7: #9ca3af;  /*Botón deshabilitado*/
+  --color-8: #ecfdf5;  /*Exito background*/
+  --font-size-1-mobile: 2.5rem; /*Títulos*/
+  --font-size-2-mobile: 2.0rem; /*Subtítulos*/
+  --font-size-3-mobile: 1.5rem; /*Textos*/
 }
 
 @font-face {
@@ -65,6 +72,19 @@ html {
   flex-direction: column;
   height: 100%;
   font-family: 'Poppins', sans-serif;
+  color: var(--color-3);
+}
+
+@media (min-width: 768px) {
+  html {
+    padding: 0 15rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    padding: 0 30rem;
+  }
 }
 
 /* Sections
@@ -107,6 +127,10 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+h1 {
+  margin-bottom: 3.2rem
 }
 
 /* Grouping content
@@ -249,6 +273,25 @@ textarea {
   /* 2 */
 }
 
+button {
+  background-color: var(--color-3);
+  color: var(--color-1);
+  border: none;
+  padding: 1.4rem;
+  border-radius: 1rem;
+  font-size: var(--font-size-3-mobile);
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.95;
+  cursor: pointer
+}
+
+button:disabled {
+  background-color: var(--color-7);
+}
+
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
@@ -258,6 +301,17 @@ button,
 input {
   /* 1 */
   overflow: visible;
+}
+
+input {
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  border: 0.1rem solid var(--color-6);
+  font-size: var(--font-size-3-mobile);
+}
+
+input::placeholder {
+  font-size: var(--font-size-3-mobile);
 }
 
 /**
@@ -291,7 +345,7 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+  outline: 0.1rem dotted ButtonText;
 }
 
 /**
@@ -368,7 +422,7 @@ textarea {
  */
 
 [type="search"] {
-  outline-offset: -2px;
+  outline-offset: -0.2rem;
   /* 1 */
 }
 
@@ -428,4 +482,19 @@ template {
 
 [hidden] {
   display: none;
+}
+
+.error {
+  color: var(--color-5);
+  font-size: var(--font-size-3-mobile);
+  text-align: center;
+}
+
+.success {
+  color: var(--color-4);
+  font-size: var(--font-size-3-mobile);
+}
+
+.info {
+  text-align: center;
 }

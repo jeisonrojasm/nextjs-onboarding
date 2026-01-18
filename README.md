@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NextJS Onboarding
 
-## Getting Started
+Frontend mobile-first desarrollado en NextJS (App Router) que consume la API NestJS (NestJS Onboarding) para autenticación con JWT, visualización de productos, flujo de onboarding de clientes y verificación del estado del sistema, como parte del reto “El Guardián del Onboarding”.
 
-First, run the development server:
+> ⚠️ **Nota: El frontend requiere que la aplicación [*nestjs-onboarding*](https://github.com/jeisonrojasm/nestjs-onboarding) esté en ejecución para poder realizar las peticiones a la API.**
+
+## 🛠️ Tecnologías utilizadas (Frontend)
+
+- NextJS
+- React — Construcción de interfaces basadas en componentes.
+- JavaScript (ES6+)
+- CSS puro
+- Fetch API
+- Docker
+- Docker Compose
+
+## ✅ Prerrequisitos
+
+Antes de comenzar, asegúrate de tener instalado lo siguiente:
+
+- ✅ [*Git*](https://git-scm.com/)
+- ✅ [*Docker* y Docker Compose](https://www.docker.com/get-started) instalados y en ejecución
+
+## 📥 Obtener el proyecto
+
+Clona el repositorio:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+#Clona el repositorio
+git clone https://github.com/jeisonrojasm/nextjs-onboarding.git
+cd nextjs-onboarding
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Ejecutar
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 1. **Archivo `.env` requerido**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Normalmente, el archivo `.env` **no debería incluirse** en un repositorio público, ya que puede contener valores de configuración sensibles.  
+Sin embargo, con fines de demostración y evaluación —y dado que este no es un proyecto de producción— el archivo `.env` está incluido en el repositorio para que cualquiera pueda ejecutar el proyecto sin configuraciones adicionales.
 
-## Learn More
+El archivo `.env` ya se encuentra ubicado en la raíz del proyecto.
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Levantar el entorno de desarrollo con Docker
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Basta con ejecutar el siguiente comando desde la raíz del proyecto para construir la imagen y levantar el contenedor del backend:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+docker-compose up --build
+```
 
-## Deploy on Vercel
+Una vez finalizado el proceso, el backend quedará disponible en:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```arduino
+http://localhost:3001
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📱 Vistas implementadas
+
+El frontend implementa las siguientes vistas mobile-first:
+
+- **Login**  
+  Autenticación mediante JWT (`POST /auth/login`).
+
+- **Dashboard**  
+  Vista principal con acceso a:
+  - Productos
+  - Onboarding
+  - Estado del sistema
+
+- **Productos**  
+  Listado de productos (`GET /products`)
+
+- **Producto**  
+  Detalle de producto (`GET /products/:id`)
+
+- **Onboarding**  
+  Formulario de apertura de cuenta (`POST /onboarding`).
+
+- **Health**  
+  Verificación del estado del sistema (`GET /health`).
+
+## 🔐 Autenticación
+
+- El JWT se obtiene al iniciar sesión.
+- El token se almacena en:
+  - `localStorage` (uso en cliente)
+
+## 👨‍💻 Autor
+
+Desarrollado por **Jeison Rojas Mora** - *Fullstack Developer*
+
+- [https://github.com/jeisonrojasm](https://github.com/jeisonrojasm)
+- [https://www.linkedin.com/in/jeison-rojas-mora/](https://www.linkedin.com/in/jeison-rojas-mora/)

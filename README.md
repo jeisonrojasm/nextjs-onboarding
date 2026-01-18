@@ -54,6 +54,23 @@ Una vez finalizado el proceso, el backend quedará disponible en:
 http://localhost:3001
 ```
 
+## 🔐 Autenticación (Login)
+
+La aplicación cuenta con una pantalla de **Login** que consume el endpoint `POST /auth/login` del backend.
+
+De acuerdo con los requerimientos del reto técnico, el proceso de autenticación utiliza **credenciales ficticias**.
+
+### Credenciales de acceso
+
+Para iniciar sesión correctamente en la aplicación, utiliza las siguientes credenciales:
+
+```json
+{
+  "username": "admin",
+  "password": "admin"
+}
+```
+
 ## 📱 Vistas implementadas
 
 El frontend implementa las siguientes vistas mobile-first:

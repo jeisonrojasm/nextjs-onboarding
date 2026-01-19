@@ -42,13 +42,13 @@ El archivo `.env` ya se encuentra ubicado en la raíz del proyecto.
 
 ### 2. Levantar el entorno de desarrollo con Docker
 
-Basta con ejecutar el siguiente comando desde la raíz del proyecto para construir la imagen y levantar el contenedor del backend:
+Basta con ejecutar el siguiente comando desde la raíz del proyecto para construir la imagen y levantar el contenedor del frontend:
 
 ```bash
 docker-compose up --build
 ```
 
-Una vez finalizado el proceso, el backend quedará disponible en:
+Una vez finalizado el proceso, el frontend quedará disponible en:
 
 ```arduino
 http://localhost:3001
